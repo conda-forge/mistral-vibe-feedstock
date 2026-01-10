@@ -47,7 +47,7 @@ requirements:
     - pyperclip >=1.11.0
     - textual-speedups >=0.2.1
     - tree_sitter >=0.25.2
-    - tree-sitter-language-pack >=0.13.0
+    - tree-sitter-bash >=0.25.1
 
 tests:
   - python:
