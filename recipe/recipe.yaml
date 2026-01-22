@@ -13,7 +13,7 @@ source:
     sha256: 316b107efb12f10cc26ad277fa950ad91de8c2ff85be4e4947cc99863ff04c56
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script:
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
@@ -42,6 +42,9 @@ requirements:
     - python-dotenv >=1.0.0
     - rich >=14.0.0
     - textual >=1.0.0
+    # linkify has to be explicitely listed
+    # as the textual feedstock does not include it
+    - linkify-it-py
     - tomli-w >=1.2.0
     - watchfiles >=1.1.1
     - pyperclip >=1.11.0
