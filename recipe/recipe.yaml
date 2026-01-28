@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.3.5"
+  version: "2.0.0"
   python_min: "3.12"
 
 package:
@@ -10,7 +10,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/m/mistral-vibe/mistral_vibe-${{ version }}.tar.gz
-    sha256: 316b107efb12f10cc26ad277fa950ad91de8c2ff85be4e4947cc99863ff04c56
+    sha256: 0b7159815c92c5cc466781efe42e3851f0101cd1ea149d837b9fcd4c57aba9fa
 
 build:
   number: 0
