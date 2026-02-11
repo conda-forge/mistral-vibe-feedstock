@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "2.0.2"
+  version: "2.1.0"
   python_min: "3.12"
 
 package:
@@ -10,7 +10,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/m/mistral-vibe/mistral_vibe-${{ version }}.tar.gz
-    sha256: 31c7d2fa6ea69632c0d70c16dc4c800509fa01e08f2426b86decacd329ed2285
+    sha256: b98af6f17e499f82d722d3817423b4a08ca3f4f70a11f906b8e2ab708a85dd6a
 
 build:
   number: 0
@@ -29,7 +29,7 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - agent-client-protocol =0.7.1
+    - agent-client-protocol =0.8.0
     - anyio >=4.12.0
     - httpx >=0.28.1
     - mcp >=1.14.0
@@ -48,6 +48,11 @@ requirements:
     - textual-speedups >=0.2.1
     - tree_sitter >=0.25.2
     - tree-sitter-bash >=0.25.1
+    - keyring >=25.6.0
+    - cryptography >=44.0.0
+    - zstandard >=0.25.0
+    - gitpython >=3.1.46
+    - giturlparse >=0.14.0
 
 tests:
   - python:
