@@ -46,7 +46,7 @@ requirements:
     - pyperclip >=1.11.0
     - python-dotenv >=1.0.0
     - pyyaml >=6.0.0
-    - requests>=2.20.0
+    - requests >=2.20.0
     - rich >=14.0.0
     - textual >=1.0.0
     - textual-speedups >=0.2.1
