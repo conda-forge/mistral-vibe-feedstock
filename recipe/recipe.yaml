@@ -31,28 +31,30 @@ requirements:
     - python >=${{ python_min }}
     - agent-client-protocol =0.8.0
     - anyio >=4.12.0
-    - httpx >=0.28.1
-    - mcp >=1.14.0
-    - mistralai =1.9.11
-    - pexpect >=4.9.0
-    - packaging >=24.1
-    - pydantic >=2.12.4
-    - pydantic-settings >=2.12.0
-    - pyyaml >=6.0.0
-    - python-dotenv >=1.0.0
-    - rich >=14.0.0
-    - textual >=1.0.0
-    - tomli-w >=1.2.0
-    - watchfiles >=1.1.1
-    - pyperclip >=1.11.0
-    - textual-speedups >=0.2.1
-    - tree_sitter >=0.25.2
-    - tree-sitter-bash >=0.25.1
-    - keyring >=25.6.0
-    - cryptography >=44.0.0
-    - zstandard >=0.25.0
+    - cryptography >=44.0.0,<=46.0.3
     - gitpython >=3.1.46
     - giturlparse >=0.14.0
+    - google-auth >=2.0.0
+    - httpx >=0.28.1
+    - keyring >=25.6.0
+    - mcp >=1.14.0
+    - mistralai =1.9.11
+    - packaging >=24.1
+    - pexpect >=4.9.0
+    - pydantic >=2.12.4
+    - pydantic-settings >=2.12.0
+    - pyperclip >=1.11.0
+    - python-dotenv >=1.0.0
+    - pyyaml >=6.0.0
+    - requests>=2.20.0
+    - rich >=14.0.0
+    - textual >=1.0.0
+    - textual-speedups >=0.2.1
+    - tomli-w >=1.2.0
+    - tree_sitter >=0.25.2
+    - tree-sitter-bash >=0.25.1
+    - watchfiles >=1.1.1
+    - zstandard >=0.25.0
 
 tests:
   - python:
