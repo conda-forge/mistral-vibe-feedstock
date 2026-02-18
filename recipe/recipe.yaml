@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "2.1.0"
+  version: "2.2.0"
   python_min: "3.12"
 
 package:
@@ -10,7 +10,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/m/mistral-vibe/mistral_vibe-${{ version }}.tar.gz
-    sha256: b98af6f17e499f82d722d3817423b4a08ca3f4f70a11f906b8e2ab708a85dd6a
+    sha256: d85dd1ab8bb06685914f737149cb7ef476d0da9d60613517e8d6680615984429
 
 build:
   number: 0
@@ -31,28 +31,30 @@ requirements:
     - python >=${{ python_min }}
     - agent-client-protocol =0.8.0
     - anyio >=4.12.0
-    - httpx >=0.28.1
-    - mcp >=1.14.0
-    - mistralai =1.9.11
-    - pexpect >=4.9.0
-    - packaging >=24.1
-    - pydantic >=2.12.4
-    - pydantic-settings >=2.12.0
-    - pyyaml >=6.0.0
-    - python-dotenv >=1.0.0
-    - rich >=14.0.0
-    - textual >=1.0.0
-    - tomli-w >=1.2.0
-    - watchfiles >=1.1.1
-    - pyperclip >=1.11.0
-    - textual-speedups >=0.2.1
-    - tree_sitter >=0.25.2
-    - tree-sitter-bash >=0.25.1
-    - keyring >=25.6.0
-    - cryptography >=44.0.0
-    - zstandard >=0.25.0
+    - cryptography >=44.0.0,<=46.0.3
     - gitpython >=3.1.46
     - giturlparse >=0.14.0
+    - google-auth >=2.0.0
+    - httpx >=0.28.1
+    - keyring >=25.6.0
+    - mcp >=1.14.0
+    - mistralai =1.9.11
+    - packaging >=24.1
+    - pexpect >=4.9.0
+    - pydantic >=2.12.4
+    - pydantic-settings >=2.12.0
+    - pyperclip >=1.11.0
+    - python-dotenv >=1.0.0
+    - pyyaml >=6.0.0
+    - requests >=2.20.0
+    - rich >=14.0.0
+    - textual >=1.0.0
+    - textual-speedups >=0.2.1
+    - tomli-w >=1.2.0
+    - tree_sitter >=0.25.2
+    - tree-sitter-bash >=0.25.1
+    - watchfiles >=1.1.1
+    - zstandard >=0.25.0
 
 tests:
   - python:
