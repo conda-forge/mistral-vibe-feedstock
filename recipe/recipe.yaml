@@ -50,7 +50,7 @@ requirements:
     - pyyaml >=6.0.0
     - requests >=2.20.0
     - rich >=14.0.0
-    - sounddevice >=0.5.1
+    - python-sounddevice >=0.5.1
     - textual >=8.1.1
     - textual-speedups >=0.2.1
     - tomli-w >=1.2.0
