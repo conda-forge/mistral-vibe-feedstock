@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "2.9.3"
+  version: "2.9.4"
   python_min: "3.12"
 
 package:
@@ -10,7 +10,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/m/mistral-vibe/mistral_vibe-${{ version }}.tar.gz
-    sha256: 9c14e1c631337aa5b7aaf18e6c70c986d3cdcb3d0cd4609885020729688cddc9
+    sha256: 0104f04543450a38b37432759108b460deff4f4366ecbe62be23da2129be848f
 
 build:
   number: 0
@@ -33,7 +33,7 @@ requirements:
     - anyio >=4.12.0
     - cachetools >=5.5.0
     - charset-normalizer >=3.4.4
-    - cryptography >=44.0.0,<=46.0.3
+    - cryptography >=44.0.0
     - gitpython >=3.1.46
     - giturlparse >=0.14.0
     - google-auth >=2.0.0
@@ -42,7 +42,7 @@ requirements:
     - keyring >=25.6.0
     - markdownify >=1.2.2
     - mcp >=1.14.0
-    - mistralai =2.3.2
+    - mistralai =2.4.4
     - opentelemetry-api >=1.39.1
     - opentelemetry-exporter-otlp-proto-http >=1.39.1
     - opentelemetry-sdk >=1.39.1
@@ -57,7 +57,7 @@ requirements:
     - requests >=2.20.0
     - rich >=14.0.0
     - python-sounddevice >=0.5.1
-    - textual >=8.2.1
+    - textual =8.2.4
     - textual-speedups >=0.2.1
     - tomli-w >=1.2.0
     - tree_sitter >=0.25.2
