@@ -2,7 +2,6 @@ schema_version: 1
 
 context:
   version: "2.10.0"
-  python_min: "3.12"
 
 package:
   name: mistral-vibe
@@ -23,11 +22,11 @@ build:
 
 requirements:
   host:
-    - python ${{ python_min }}.*
+    - python
     - hatchling
     - pip
   run:
-    - python >=${{ python_min }}
+    - python
     - agent-client-protocol =0.9.0
     - annotated-types =0.7.0
     - anyio =4.13.0
@@ -135,7 +134,6 @@ tests:
       imports:
         - vibe
       pip_check: true
-      python_version: ${{ python_min }}.*
   - script:
       - vibe --help
 
