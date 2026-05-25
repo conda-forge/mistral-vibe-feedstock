@@ -14,6 +14,7 @@ source:
 
 build:
   number: 0
+  noarch: python
   script:
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
   python:
@@ -23,11 +24,11 @@ build:
 
 requirements:
   host:
-    - python
+    - python ${{ python_min }}.*
     - hatchling
     - pip
   run:
-    - python
+    - python >=${{ python_min }}
     - agent-client-protocol =0.9.0
     - annotated-types =0.7.0
     - anyio =4.13.0
@@ -38,9 +39,7 @@ requirements:
     - cffi =2.0.0
     - charset-normalizer =3.4.7
     - click =8.3.3
-    - if: win
-      then:
-        - colorama =0.4.6
+    - colorama =0.4.6
     - cryptography =47.0.0
     - eval-type-backport =0.3.1
     - gitdb =4.0.12
@@ -57,9 +56,7 @@ requirements:
     - jaraco-classes =3.4.0
     - jaraco-context =6.1.2
     - jaraco-functools =4.4.0
-    - if: linux
-      then:
-        - jeepney =0.9.0
+    - jeepney =0.9.0
     - jsonpatch =1.33
     - jsonpath-python =1.1.5
     - jsonpointer =3.1.1
@@ -98,18 +95,14 @@ requirements:
     - python-dotenv =1.2.2
     - python-multipart =0.0.27
     - python-sounddevice =0.5.5
-    - if: win
-      then:
-        - pywin32 =311
-        - pywin32-ctypes =0.2.3
+    - pywin32 =311
+    - pywin32-ctypes =0.2.3
     - pyyaml =6.0.3
     - referencing =0.37.0
     - requests =2.33.1
     - rich =15.0.0
     - rpds-py =0.30.0
-    - if: linux
-      then:
-        - secretstorage =3.5.0
+    - secretstorage =3.5.0
     - six =1.17.0
     - smmap =5.0.3
     - soupsieve =2.8.3
@@ -135,6 +128,7 @@ tests:
       imports:
         - vibe
       pip_check: true
+    python_version: ${{ python_min }}.*
   - script:
       - vibe --help
 
