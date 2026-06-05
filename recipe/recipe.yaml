@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "2.13.0"
+  version: "2.14.0"
   python_min: "3.12"
 
 package:
@@ -10,8 +10,8 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/m/mistral-vibe/mistral_vibe-${{ version }}.tar.gz
-    sha256: 00924ccb671e1faf942c88f4d5f4b032f24fae546571f8b24169afe4a3e0aac1
-    patches: 
+    sha256: cb87996ad256a203b8194bc1d9833df9bad890e76176c937a674447845dbc7a4
+    patches:
       - 0001-Relax-constraints-on-protobuff-and-secretstorage-dep.patch
 
 build:
@@ -30,7 +30,7 @@ requirements:
     - hatchling
     - pip
   run:
-    - agent-client-protocol ==0.9.0
+    - agent-client-protocol ==0.10.1
     - annotated-types ==0.7.0
     - anyio ==4.13.0
     - attrs ==26.1.0
@@ -51,6 +51,7 @@ requirements:
     - googleapis-common-protos ==1.74.0
     - httpx ==0.28.1
     - httpx-sse ==0.4.3
+    - humanize ==4.15.0
     - idna ==3.13
     - importlib-metadata ==8.7.1
     # - jaraco-classes ==3.4.0
