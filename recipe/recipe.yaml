@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "2.14.0"
+  version: "2.14.1"
   python_min: "3.12"
 
 package:
@@ -10,7 +10,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/m/mistral-vibe/mistral_vibe-${{ version }}.tar.gz
-    sha256: cb87996ad256a203b8194bc1d9833df9bad890e76176c937a674447845dbc7a4
+    sha256: 62d707b4e15204cb9cfdd51052034cb357d17167510c587934a7167cb00375ba
     patches:
       - 0001-Relax-constraints-on-protobuff-and-secretstorage-dep.patch
 
