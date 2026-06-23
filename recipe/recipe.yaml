@@ -12,7 +12,7 @@ source:
   - url: https://pypi.org/packages/source/m/mistral-vibe/mistral_vibe-${{ version }}.tar.gz
     sha256: fe819e7ba27485afe4b545bbaa332a25e44457f32be6703aca9214150d76df7e
     patches:
-      - 0001-Relax-constraints-on-protobuff-and-secretstorage-dep.patch
+      - 0001-Relax-constraints-on-dependencies.patch
 
 build:
   number: 0
@@ -41,7 +41,7 @@ requirements:
     - charset-normalizer ==3.4.7
     - click ==8.3.3
     - colorama ==0.4.6
-    - cryptography ==47.0.0
+    - cryptography ==48.0.1
     - eval-type-backport ==0.3.1
     - gitdb ==4.0.12
     - gitpython ==3.1.47
@@ -52,7 +52,7 @@ requirements:
     - httpx ==0.28.1
     - httpx-sse ==0.4.3
     - humanize ==4.15.0
-    - idna ==3.13
+    - idna ==3.18
     - importlib-metadata ==8.7.1
     # - jaraco-classes ==3.4.0
     # - jaraco-context ==6.1.2
@@ -67,10 +67,10 @@ requirements:
     - linkify-it-py ==2.1.0
     - markdown-it-py ==4.0.0
     - markdownify ==1.2.2
-    - mcp ==1.27.1
+    - mcp ==1.28.0
     - mdit-py-plugins ==0.5.0
     - mdurl ==0.1.2
-    - mistralai ==2.4.4
+    - mistralai ==2.4.11
     - more-itertools ==11.0.2
     - opentelemetry-api ==1.39.1
     - opentelemetry-exporter-otlp-proto-common ==1.39.1
@@ -90,12 +90,12 @@ requirements:
     - pydantic-core ==2.46.3
     - pydantic-settings ==2.14.0
     - pygments ==2.20.0
-    - pyjwt ==2.12.1
+    - pyjwt ==2.13.0
     - pyperclip ==1.11.0
     - python >=${{ python_min }}
     - python-dateutil ==2.9.0.post0
     - python-dotenv ==1.2.2
-    - python-multipart ==0.0.27
+    - python-multipart ==0.0.32
     - python-sounddevice ==0.5.5
     - pyyaml ==6.0.3
     - referencing ==0.37.0
@@ -117,7 +117,7 @@ requirements:
     - typing-extensions ==4.15.0
     - typing-inspection ==0.4.2
     - uc-micro-py ==2.0.0
-    - urllib3 ==2.6.3
+    - urllib3 ==2.7.0
     - uvicorn ==0.46.0
     - watchfiles ==1.1.1
     - websockets ==16.0
