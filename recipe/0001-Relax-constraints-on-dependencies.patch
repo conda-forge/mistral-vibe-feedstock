@@ -1,14 +1,5 @@
-From c87c2f24f1408c2b60d01703ced09bd70297d246 Mon Sep 17 00:00:00 2001
-From: Christophe Haen <christophe.haen@cern.ch>
-Date: Tue, 23 Jun 2026 09:30:05 +0200
-Subject: [PATCH] Relax constraints on dependencies
-
----
- pyproject.toml | 6 ++++--
- 1 file changed, 4 insertions(+), 2 deletions(-)
-
 diff --git a/pyproject.toml b/pyproject.toml
-index 52213d6..c35c6a3 100644
+index c065ac7..9e88fb3 100644
 --- a/pyproject.toml
 +++ b/pyproject.toml
 @@ -79,7 +79,8 @@ dependencies = [
@@ -28,9 +19,6 @@ index 52213d6..c35c6a3 100644
 -    "secretstorage==3.5.0 ; sys_platform == 'linux'",
 +    # Needed until https://github.com/conda-forge/secretstorage-feedstock/pull/27 is fixed
 +    "secretstorage",
+     "sentry-sdk==2.63.0",
      "six==1.17.0",
      "smmap==5.0.3",
-     "sounddevice==0.5.5",
--- 
-2.54.0
-

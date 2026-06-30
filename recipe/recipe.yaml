@@ -45,10 +45,11 @@ requirements:
     - eval-type-backport ==0.3.1
     - gitdb ==4.0.12
     - gitpython ==3.1.50
-    - giturlparse ==0.14.0
-    - google-auth ==2.49.2
+    - giturlparse ==0.15.0
     - google-auth ==2.49.2
     - googleapis-common-protos ==1.74.0
+    - h11 ==0.16.0
+    - httpcore ==1.0.9
     - httpx ==0.28.1
     - httpx-sse ==0.4.3
     - humanize ==4.15.0
@@ -67,7 +68,7 @@ requirements:
     - linkify-it-py ==2.1.0
     - markdown-it-py ==4.0.0
     - markdownify ==1.2.2
-    - mcp ==1.28.0
+    - mcp ==1.28.1
     - mdit-py-plugins ==0.5.0
     - mdurl ==0.1.2
     - mistralai ==2.4.11
@@ -103,6 +104,7 @@ requirements:
     - rich ==15.0.0
     - rpds-py ==0.30.0
     - secretstorage
+    - sentry-sdk ==2.63.0
     - six ==1.17.0
     - smmap ==5.0.3
     - soupsieve ==2.8.3
@@ -119,7 +121,7 @@ requirements:
     - uc-micro-py ==2.0.0
     - urllib3 ==2.7.0
     - uvicorn ==0.46.0
-    - watchfiles ==1.1.1
+    - watchfiles ==1.2.1
     - websockets ==16.0
     - zipp ==3.23.1
     - zstandard ==0.25.0
