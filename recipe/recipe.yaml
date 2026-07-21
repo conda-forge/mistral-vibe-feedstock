@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "2.20.0"
+  version: "2.21.0"
   python_min: "3.12"
 
 package:
@@ -10,7 +10,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/m/mistral-vibe/mistral_vibe-${{ version }}.tar.gz
-    sha256: 75ab68afdd4ee87a287f1469048ec73102d5d6a0cc9ae254a9015b86cb0187b2
+    sha256: f30774eeaef7faf4f13512255e1cef3af3381ab9a58d6cb22b467abe77cf037a
     patches:
       - 0001-Relax-constraints-on-dependencies.patch
 
@@ -27,7 +27,7 @@ build:
 requirements:
   host:
     - python ${{ python_min }}.*
-    - hatchling
+    - hatchling =1.31.0
     - pip
   run:
     - agent-client-protocol ==0.11.0
@@ -44,7 +44,7 @@ requirements:
     - cryptography ==48.0.1
     - eval-type-backport ==0.3.1
     - gitdb ==4.0.12
-    - gitpython ==3.1.50
+    - gitpython ==3.1.51
     - giturlparse ==0.15.0
     - google-auth ==2.49.2
     - googleapis-common-protos ==1.74.0
