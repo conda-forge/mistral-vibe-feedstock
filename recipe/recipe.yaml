@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "2.19.1"
+  version: "2.20.0"
   python_min: "3.12"
 
 package:
@@ -10,7 +10,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/m/mistral-vibe/mistral_vibe-${{ version }}.tar.gz
-    sha256: 08bc3e123a772ae4b6f201ca1184f9122e545c5255d04162183db6b436169b7a
+    sha256: 75ab68afdd4ee87a287f1469048ec73102d5d6a0cc9ae254a9015b86cb0187b2
     patches:
       - 0001-Relax-constraints-on-dependencies.patch
 
@@ -30,7 +30,7 @@ requirements:
     - hatchling
     - pip
   run:
-    - agent-client-protocol ==0.10.1
+    - agent-client-protocol ==0.11.0
     - annotated-types ==0.7.0
     - anyio ==4.14.1
     - attrs ==26.1.0
@@ -67,11 +67,11 @@ requirements:
     - keyring ==25.7.0
     - linkify-it-py ==2.1.0
     - markdown-it-py ==4.0.0
-    - markdownify ==1.2.2
+    - markdownify ==1.2.3
     - mcp ==1.28.1
     - mdit-py-plugins ==0.5.0
     - mdurl ==0.1.2
-    - mistralai ==2.5.2
+    - mistralai ==2.6.0
     - more-itertools ==11.0.2
     - opentelemetry-api ==1.39.1
     - opentelemetry-exporter-otlp-proto-common ==1.39.1
