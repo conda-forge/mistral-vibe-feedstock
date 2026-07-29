@@ -2,7 +2,6 @@ schema_version: 1
 
 context:
   version: "2.23.1"
-  python_min: "3.12"
 
 package:
   name: mistral-vibe
@@ -16,6 +15,8 @@ source:
 
 build:
   number: 0
+  skip:
+    - match(python, "<3.12")
   script:
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
   python:
@@ -25,7 +26,7 @@ build:
 
 requirements:
   host:
-    - python ${{ python_min }}.*
+    - python
     - hatchling =1.31.0
     - pip
   run:
@@ -92,7 +93,7 @@ requirements:
     - pygments ==2.20.0
     - pyjwt ==2.13.0
     - pyperclip ==1.11.0
-    - python >=${{ python_min }}
+    - python
     - python-dateutil ==2.9.0.post0
     - python-dotenv ==1.2.2
     - python-multipart ==0.0.32
@@ -133,7 +134,6 @@ tests:
       imports:
         - vibe
       pip_check: true
-      python_version: ${{ python_min }}.*
   - script:
       - vibe --help
 
