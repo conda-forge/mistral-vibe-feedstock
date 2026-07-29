@@ -44,7 +44,7 @@ requirements:
     - cryptography ==48.0.1
     - eval-type-backport ==0.3.1
     - gitdb ==4.0.12
-    - gitpython ==3.1.51
+    - gitpython ==3.1.53
     - giturlparse ==0.15.0
     - google-auth ==2.49.2
     - googleapis-common-protos ==1.74.0
@@ -84,7 +84,7 @@ requirements:
     - platformdirs ==4.9.6
     - protobuf
     - ptyprocess ==0.7.0
-    - pyasn1 ==0.6.3
+    - pyasn1 ==0.6.4
     - pyasn1-modules ==0.4.2
     - pycparser ==3.0
     - pydantic ==2.13.4
@@ -98,6 +98,9 @@ requirements:
     - python-dotenv ==1.2.2
     - python-multipart ==0.0.32
     - python-sounddevice ==0.5.5
+    - if: win
+        then:
+          - pywinpty ==3.0.5
     - pyyaml ==6.0.3
     - referencing ==0.37.0
     - requests ==2.34.2
