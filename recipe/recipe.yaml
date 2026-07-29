@@ -25,6 +25,12 @@ build:
       - vibe-acp = vibe.acp.entrypoint:main
 
 requirements:
+  build:
+    - python
+    - hatchling =1.31.0
+    - if: build_platform != target_platform
+      then:
+        - cross-python_${{ target_platform }}
   host:
     - python
     - hatchling =1.31.0
