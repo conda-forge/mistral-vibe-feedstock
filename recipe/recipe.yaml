@@ -140,13 +140,14 @@ requirements:
     - zstandard ==0.25.0
 
 tests:
-  - python:
-      imports:
-        - if: build_platform == target_platform
-          then: vibe
-      pip_check: true
-  - script:
-      - vibe --help
+  - if: build_platform == target_platform
+    then:
+      - python:
+          imports:
+            - vibe
+          pip_check: true
+      - script:
+          - vibe --help
 
 about:
   license: Apache-2.0
