@@ -142,7 +142,8 @@ requirements:
 tests:
   - python:
       imports:
-        - vibe
+        - if: build_platform == target_platform
+          then: vibe
       pip_check: true
   - script:
       - vibe --help
