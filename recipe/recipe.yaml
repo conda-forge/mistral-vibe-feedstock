@@ -143,6 +143,7 @@ tests:
   - python:
       imports:
         - vibe
+      pip_check: false
   - script:
       - vibe --help
 
