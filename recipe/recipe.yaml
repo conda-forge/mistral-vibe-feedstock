@@ -108,7 +108,7 @@ requirements:
     - python-sounddevice ==0.5.5
     - if: win
       then:
-        - pywinpty ==3.0.5
+        - pywinpty ==3.0.6
     - pyyaml ==6.0.3
     - referencing ==0.37.0
     - requests ==2.34.2
