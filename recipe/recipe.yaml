@@ -14,7 +14,7 @@ source:
       - 0001-Relax-constraints-on-dependencies.patch
 
 build:
-  number: 0
+  number: 1
   skip:
     - match(python, "<3.12")
   script:
