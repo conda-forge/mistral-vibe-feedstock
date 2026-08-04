@@ -2,7 +2,6 @@ schema_version: 1
 
 context:
   version: "2.23.3"
-  python_min: "3.12"
 
 package:
   name: mistral-vibe
@@ -16,17 +15,25 @@ source:
 
 build:
   number: 0
-  noarch: python
+  skip:
+    - match(python, "<3.12")
   script:
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
   python:
     entry_points:
       - vibe = vibe.cli.entrypoint:main
       - vibe-acp = vibe.acp.entrypoint:main
+      - vibe-app-server = vibe.app_server.stdio:main
 
 requirements:
+  build:
+    - python
+    - hatchling =1.31.0
+    - if: build_platform != target_platform
+      then:
+        - cross-python_${{ target_platform }}
   host:
-    - python ${{ python_min }}.*
+    - python
     - hatchling =1.31.0
     - pip
   run:
@@ -44,7 +51,7 @@ requirements:
     - cryptography ==48.0.1
     - eval-type-backport ==0.3.1
     - gitdb ==4.0.12
-    - gitpython ==3.1.51
+    - gitpython ==3.1.53
     - giturlparse ==0.15.0
     - google-auth ==2.49.2
     - googleapis-common-protos ==1.74.0
@@ -84,7 +91,7 @@ requirements:
     - platformdirs ==4.9.6
     - protobuf
     - ptyprocess ==0.7.0
-    - pyasn1 ==0.6.3
+    - pyasn1 ==0.6.4
     - pyasn1-modules ==0.4.2
     - pycparser ==3.0
     - pydantic ==2.13.4
@@ -93,17 +100,24 @@ requirements:
     - pygments ==2.20.0
     - pyjwt ==2.13.0
     - pyperclip ==1.11.0
-    - python >=${{ python_min }}
+    - python
     - python-dateutil ==2.9.0.post0
     - python-dotenv ==1.2.2
     - python-multipart ==0.0.32
     - python-sounddevice ==0.5.5
+    - if: win
+      then:
+        - pywin32 ==311
+        - pywin32-ctypes ==0.2.3
+        - pywinpty ==3.0.5
     - pyyaml ==6.0.3
     - referencing ==0.37.0
     - requests ==2.34.2
     - rich ==15.0.0
     - rpds-py ==0.30.0
-    - secretstorage
+    - if: linux
+      then:
+        - secretstorage ==3.5.0
     - sentry-sdk ==2.64.0
     - six ==1.17.0
     - smmap ==5.0.3
@@ -131,7 +145,6 @@ tests:
       imports:
         - vibe
       pip_check: true
-      python_version: ${{ python_min }}.*
   - script:
       - vibe --help
 
