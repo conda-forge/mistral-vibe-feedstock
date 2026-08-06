@@ -43,7 +43,7 @@ requirements:
     - attrs ==26.1.0
     - beautifulsoup4 ==4.14.3
     - cachetools ==7.0.6
-    - certifi ==2026.6.17
+    - certifi ==2026.7.22
     - cffi ==2.0.0
     - charset-normalizer ==3.4.7
     - click ==8.3.3
@@ -51,7 +51,7 @@ requirements:
     - cryptography ==48.0.1
     - eval-type-backport ==0.3.1
     - gitdb ==4.0.12
-    - gitpython ==3.1.53
+    - gitpython ==3.1.57
     - giturlparse ==0.15.0
     - google-auth ==2.49.2
     - googleapis-common-protos ==1.74.0
