@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "2.23.3"
+  version: "2.24.0"
 
 package:
   name: mistral-vibe
@@ -9,12 +9,12 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/m/mistral-vibe/mistral_vibe-${{ version }}.tar.gz
-    sha256: 89da5ae8e74482ec322c67acd55ab454e2da9d1ca65c23836354fab9c0883dba
+    sha256: 871614bc0483f7e17e99ab2416b2ac27664a290bd91f59a87be2d025ad1c0113
     patches:
       - 0001-Relax-constraints-on-dependencies.patch
 
 build:
-  number: 1
+  number: 0
   skip:
     - match(python, "<3.12")
   script:
@@ -43,7 +43,7 @@ requirements:
     - attrs ==26.1.0
     - beautifulsoup4 ==4.14.3
     - cachetools ==7.0.6
-    - certifi ==2026.6.17
+    - certifi ==2026.7.22
     - cffi ==2.0.0
     - charset-normalizer ==3.4.7
     - click ==8.3.3
@@ -51,7 +51,7 @@ requirements:
     - cryptography ==48.0.1
     - eval-type-backport ==0.3.1
     - gitdb ==4.0.12
-    - gitpython ==3.1.53
+    - gitpython ==3.1.57
     - giturlparse ==0.15.0
     - google-auth ==2.49.2
     - googleapis-common-protos ==1.74.0
