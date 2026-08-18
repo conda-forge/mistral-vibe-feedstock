@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "2.24.1"
+  version: "2.24.2"
   python_min: "3.12"
 
 package:
@@ -10,7 +10,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/m/mistral-vibe/mistral_vibe-${{ version }}.tar.gz
-    sha256: 680adc84ca738d7738d4762640cba1ad57fdea1855c99f82c5caa802282d81e3
+    sha256: be62b3148a9640ab2d72ab9849a40499d1680aa59589b01deb62c5eb08df269d
     patches:
       - 0001-Relax-constraints-on-dependencies.patch
 
