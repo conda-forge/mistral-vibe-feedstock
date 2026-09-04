@@ -108,6 +108,7 @@ requirements:
     - pyyaml ==6.0.3
     - referencing ==0.37.0
     - requests ==2.34.2
+    - rfc8785 ==0.1.4
     - rich ==15.0.0
     - rpds-py ==0.30.0
     - if: linux
