@@ -1,0 +1,44 @@
+diff --git a/vibe/app_server/_provided_tools.py b/vibe/app_server/_provided_tools.py
+--- a/vibe/app_server/_provided_tools.py
++++ b/vibe/app_server/_provided_tools.py
+@@ -15,15 +15,26 @@ from typing import TYPE_CHECKING, Any
+ 
+-from mistralai_vibe_local_harness.protocol import (  # pyright: ignore[reportMissingImports]
+-    RustProtocolError,
+-    RustProvidedToolCall,
+-    RustProvidedToolCallAction,
+-    RustProvidedToolDefinition,
+-    RustTextContentBlock,
+-    RustToolFailedEvent,
+-    RustToolFailureResult,
+-    RustToolGroupDefinition,
+-    RustToolSucceededEvent,
+-    RustToolSuccessResult,
+-)
++try:
++    from mistralai_vibe_local_harness.protocol import (  # pyright: ignore[reportMissingImports]
++        RustProtocolError,
++        RustProvidedToolCall,
++        RustProvidedToolCallAction,
++        RustProvidedToolDefinition,
++        RustTextContentBlock,
++        RustToolFailedEvent,
++        RustToolFailureResult,
++        RustToolGroupDefinition,
++        RustToolSucceededEvent,
++        RustToolSuccessResult,
++    )
++except ModuleNotFoundError:
++    RustProtocolError = None
++    RustProvidedToolCall = None
++    RustProvidedToolCallAction = None
++    RustProvidedToolDefinition = None
++    RustTextContentBlock = None
++    RustToolFailedEvent = None
++    RustToolFailureResult = None
++    RustToolGroupDefinition = None
++    RustToolSucceededEvent = None
++    RustToolSuccessResult = None
+ from pydantic import BaseModel, ValidationError
+ 
+ if TYPE_CHECKING:

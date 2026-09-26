@@ -1,0 +1,44 @@
+diff --git a/pyproject.toml b/pyproject.toml
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -141,33 +141,19 @@
+ Documentation = "https://github.com/mistralai/mistral-vibe#readme"
+ 
+ [build-system]
+-requires = ["maturin==1.14.1"]
+-build-backend = "maturin_backend"
+-backend-path = ["build_backend"]
++requires = ["hatchling"]
++build-backend = "hatchling.build"
+ 
+ [[tool.uv.index]]
+ default = true
+ name = "pypi"
+ url = "https://pypi.org/simple"
+ 
+-[tool.maturin]
+-manifest-path = ".native-build/harness-core/Cargo.toml"
+-module-name = "mistralai_vibe_local_harness._native"
+-python-source = "."
+-python-packages = ["vibe", "mistralai_vibe_local_harness"]
+-include = [
+-    { path = "vibe/_bin/*", format = "wheel" },
+-    # The runtime is staged during the build and ignored by Git. Include it
+-    # explicitly so Maturin does not filter its Python sources out.
+-    { path = "mistralai_vibe_local_harness/*", format = "wheel" },
+-    { path = "mistralai_vibe_local_harness/**/*", format = "wheel" },
+-]
+-exclude = [
+-    "**/__pycache__/**",
+-    "**/*.pyc",
+-    "vibe/cli-rust/**",
+-]
+-features = ["extension-module"]
++[tool.hatch.build.targets.wheel]
++# conda-forge: ship the pure-Python package only; the optional Rust
++# components (mistralai_vibe_local_harness, vibe-rs) are not built.
++include = ["vibe/"]
++exclude = ["vibe/cli-rust/"]
+ 
+ [project.scripts]
+ vibe = "vibe.cli.launcher:main"
